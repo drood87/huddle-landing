@@ -1,3 +1,30 @@
+/* Declare CSS Variables on root */
+/* ============================== */
+
+:root {
+    --color-pink: hsl(322, 100%, 66%);
+    --color-dark-cyan: hsl(192, 100%, 9%);
+    --color-gray-blue: hsl(208, 11%, 55%);
+    --font-poppins: "Poppins", sans-serif;
+    --font-opensans: "Open Sans", sans-serif;
+}
+
+/* Declare html standart style */
+/* =========================== */
+
+html {
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 0.1px;
+    line-height: 1.2em;
+}
+
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
@@ -5,3 +32,85 @@
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
+
+.font--poppins {
+    font-family: var(--font-poppins);
+}
+
+.font--opensans {
+    font-family: var(--font-opensans);
+}
+
+.color--pink {
+    color: var(--color-pink);
+}
+
+.color--dark-cyan {
+    color: var(--color-dark-cyan);
+}
+
+.color--gray-blue {
+    color: var(--color-gray-blue);
+}
+
+/* Header logo */
+/* =========== */
+
+header > img {
+    width: 50%;
+    color: black;
+}
+
+/* Hero section individual styles */
+/* ============================== */
+
+.hero {
+    width: 80%;
+    margin: 5em auto;
+}
+
+.hero > img {
+    margin-top: 2em;
+    width: 100%;
+}
+
+.hero__descr > * {
+    text-align: center;
+}
+
+.hero__descr h2 {
+    text-transform: capitalize;
+    font-size: 1.1em;
+    margin-top: 2em;
+}
+
+.hero__descr h3 {
+    font-size: 0.65em;
+    font-weight: 400;
+    margin-top: 2em;
+}
+
+/* Email Newsletter styles */
+/* ======================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-up__wrapper > input {
+    flex: 1;
+}
+
+.sign-up___wrapper > button {
+    flex: 1;
+}
+
+/* styles for input field */
