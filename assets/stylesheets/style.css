@@ -12,12 +12,27 @@
 /* Declare html standart style */
 /* =========================== */
 
+*,
+body {
+    margin: 0;
+    padding: 0;
+}
+
 html {
     box-sizing: border-box;
     font-size: 20px;
     font-weight: 200;
     letter-spacing: 0.1px;
     line-height: 1.2em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 *:before,
@@ -42,7 +57,7 @@ html {
 }
 
 .color--pink {
-    color: var(--color-pink);
+    background-color: var(--color-pink);
 }
 
 .color--dark-cyan {
@@ -56,9 +71,15 @@ html {
 /* Header logo */
 /* =========== */
 
+header {
+    width: 80%;
+    margin: 0 auto;
+}
+
 header > img {
     width: 50%;
     color: black;
+    padding-top: 10px;
 }
 
 /* Hero section individual styles */
@@ -101,16 +122,93 @@ form {
 }
 
 .sign-up__wrapper {
+    width: 85%;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 8em;
 }
 
-.sign-up__wrapper > input {
-    flex: 1;
-}
-
-.sign-up___wrapper > button {
-    flex: 1;
+.form__heading {
+    margin-top: 2em;
+    font-size: 1em;
+    text-transform: capitalize;
 }
 
 /* styles for input field */
+
+.sign-up__wrapper > input {
+    flex: 1 0 100%;
+    box-sizing: border-box;
+    border: 0.5px solid rgba(0, 0, 0, 0.05);
+    background: #fff;
+    box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-top: 2em;
+    padding-left: 1em;
+}
+
+/* styles for button in email form */
+.sign-up__wrapper > button {
+    flex: 1 0 100%;
+    box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    color: white;
+    margin-top: 2em;
+}
+
+/* footer style  */
+/* ============== */
+
+.logo-social img {
+    width: 70%;
+    margin-top: 2em;
+}
+
+.fab {
+    color: #fff;
+}
+
+.links--font-size {
+    font-size: 0.7em;
+}
+
+.links {
+    margin-top: 2em;
+}
+
+.disclaimer > p {
+    font-size: 0.7em;
+    color: #fff;
+    text-align: center;
+}
+
+footer {
+    margin-top: 2em;
+    height: 100%;
+    background-color: var(--color-dark-cyan);
+    background-repeat: no-repeat;
+}
+
+.footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+ul > li {
+    margin-bottom: 0.7em;
+}
+
+.social-icons {
+    width: 30%;
+    color: #fff;
+    display: flex;
+    margin-top: 1em;
+    justify-content: space-between;
+}
