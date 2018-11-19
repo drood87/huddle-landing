@@ -7,6 +7,7 @@
     --color-gray-blue: hsl(208, 11%, 55%);
     --font-poppins: "Poppins", sans-serif;
     --font-opensans: "Open Sans", sans-serif;
+    --logo-size-desktop: "auto";
 }
 
 /* Declare html standart style */
@@ -38,14 +39,6 @@ a {
 *:before,
 *:after {
     box-sizing: inherit;
-}
-
-.attribution {
-    font-size: 11px;
-    text-align: center;
-}
-.attribution a {
-    color: hsl(228, 45%, 44%);
 }
 
 .font--poppins {
@@ -111,6 +104,30 @@ header > img {
     margin-top: 2em;
 }
 
+@media screen and (min-width: 651px) {
+    .hero__descr h2 {
+        font-size: 2em;
+        line-height: 1.5em;
+    }
+
+    .hero__descr h3 {
+        width: 80%;
+        font-size: 0.8em;
+        margin: 2em auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .hero__descr h2 {
+        font-size: 2.5em;
+    }
+
+    .hero__descr h3 {
+        font-size: 0.9em;
+        line-height: 1.5em;
+    }
+}
+
 /* Email Newsletter styles */
 /* ======================= */
 
@@ -129,15 +146,28 @@ form {
     height: 8em;
 }
 
+@media screen and (min-width: 1024px) {
+    .sign-up__wrapper {
+        height: 4em;
+        flex-wrap: nowrap;
+    }
+}
+
 .form__heading {
     margin-top: 2em;
     font-size: 1em;
     text-transform: capitalize;
 }
 
+@media screen and (min-width: 1024px) {
+    .form__heading {
+        font-size: 1.5em;
+        margin-bottom: 2em;
+}
+
 /* styles for input field */
 
-.sign-up__wrapper > input {
+.sign-up__input {
     flex: 1 0 100%;
     box-sizing: border-box;
     border: 0.5px solid rgba(0, 0, 0, 0.05);
@@ -148,8 +178,14 @@ form {
     padding-left: 1em;
 }
 
+@media all and (min-width: 1024px) {
+    .sign-up__input {
+        flex: 2 0 50%;
+    }
+}
+
 /* styles for button in email form */
-.sign-up__wrapper > button {
+.sign-up__button {
     flex: 1 0 100%;
     box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.2);
     border: none;
@@ -159,11 +195,26 @@ form {
     margin-top: 2em;
 }
 
+@media all and (min-width: 1024px) {
+    .sign-up__button {
+        flex: 1 0 20%;
+    }
+}
+
 /* footer style  */
 /* ============== */
 
-.logo-social img {
+.logo--size {
     width: 70%;
+}
+
+@media screen and (min-width: 371px) {
+    .logo--size {
+        width: var(--logo-size-desktop);
+    }
+}
+
+.logo-social img {
     margin-top: 2em;
 }
 
