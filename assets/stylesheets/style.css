@@ -69,7 +69,7 @@ header {
     margin: 0 auto;
 }
 
-header > img {
+.logo--size {
     width: 50%;
     color: black;
     padding-top: 10px;
