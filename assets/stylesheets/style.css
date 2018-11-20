@@ -104,38 +104,6 @@ header {
     margin-top: 2em;
 }
 
-@media screen and (min-width: 651px) {
-    .hero__descr h2 {
-        font-size: 2em;
-        line-height: 1.5em;
-    }
-
-    .hero__descr h3 {
-        width: 80%;
-        font-size: 0.8em;
-        margin: 2em auto;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .hero__descr h2 {
-        font-size: 2.5em;
-    }
-
-    .hero__descr h3 {
-        font-size: 0.9em;
-        line-height: 1.5em;
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    .hero__descr h3 {
-        word-spacing: 0.2em;
-        font-size: 1.3em;
-        line-height: 1.5em;
-    }
-}
-
 /* Email Newsletter styles */
 /* ======================= */
 
@@ -154,32 +122,12 @@ form {
     height: 8em;
 }
 
-@media screen and (min-width: 1024px) {
-    .sign-up__wrapper {
-        height: 4em;
-        flex-wrap: nowrap;
-        margin-bottom: 3em;
-    }
-}
-
-@media all and (min-width: 1440px) {
-    .sign-up__wrapper {
-        width: 60%;
-    }
-}
-
 .form__heading {
     margin-top: 2em;
     font-size: 1em;
     text-transform: capitalize;
 }
 
-@media screen and (min-width: 1024px) {
-    .form__heading {
-        font-size: 1.5em;
-        margin-bottom: 2em;
-    }
-}
 /* styles for input field */
 
 .sign-up__input {
@@ -193,18 +141,6 @@ form {
     padding-left: 1em;
 }
 
-@media all and (min-width: 1024px) {
-    .sign-up__input {
-        flex: 2 0 50%;
-    }
-}
-
-@media all and (min-width: 1440px) {
-    .sign-up__input {
-        flex: 2 0 50%;
-    }
-}
-
 /* styles for button in email form */
 .sign-up__button {
     flex: 1 0 100%;
@@ -216,13 +152,6 @@ form {
     margin-top: 2em;
 }
 
-@media all and (min-width: 1024px) {
-    .sign-up__button {
-        flex: 1 0 20%;
-        margin: 2em 0 0 2.5em;
-    }
-}
-
 /* footer style  */
 /* ============== */
 
@@ -230,20 +159,8 @@ form {
     width: 70%;
 }
 
-@media screen and (min-width: 371px) {
-    .logo--size {
-        width: var(--logo-size-desktop);
-    }
-}
-
 .logo-social img {
     margin-top: 2em;
-}
-
-@media all and (min-width: 1024px) {
-    .logo-social {
-        flex: 1 0 30%;
-    }
 }
 
 .fab {
@@ -264,17 +181,6 @@ form {
     text-align: center;
 }
 
-@media all and (min-width: 1440px) {
-    .disclaimer {
-        margin: 2em;
-    }
-
-    .disclaimer > p {
-        text-align: right;
-        padding-right: 1em;
-    }
-}
-
 footer {
     margin-top: 2em;
     height: 100%;
@@ -291,28 +197,8 @@ footer {
     height: 100%;
 }
 
-@media all and (min-width: 1440px) {
-    .footer__wrapper {
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-}
-
 ul > li {
     margin-bottom: 0.7em;
-}
-
-@media all and (min-width: 1440px) {
-    .links__list {
-        display: flex;
-        justify-content: space-around;
-        margin: 2em;
-        padding-left: 20%;
-    }
-
-    .links {
-        flex: 2 0 60%;
-    }
 }
 
 .social-icons {
@@ -323,7 +209,106 @@ ul > li {
     justify-content: space-between;
 }
 
+/* Media queries above 651px */
+/* ========================= */
+
+@media screen and (min-width: 651px) {
+    .hero__descr h2 {
+        font-size: 2em;
+        line-height: 1.5em;
+    }
+
+    .hero__descr h3 {
+        width: 80%;
+        font-size: 0.8em;
+        margin: 2em auto;
+    }
+
+    .logo--size {
+        width: var(--logo-size-desktop);
+    }
+}
+
+/* Media queries > 1024px */
+/* ======================= */
+@media screen and (min-width: 1024px) {
+    .hero__descr h2 {
+        font-size: 2.5em;
+    }
+
+    .hero__descr h3 {
+        font-size: 0.9em;
+        line-height: 1.5em;
+    }
+
+    .sign-up__wrapper {
+        height: 4em;
+        flex-wrap: nowrap;
+        margin-bottom: 3em;
+    }
+
+    .form__heading {
+        font-size: 1.5em;
+        margin-bottom: 2em;
+    }
+
+    .sign-up__input {
+        flex: 2 0 50%;
+    }
+
+    .sign-up__button {
+        flex: 1 0 20%;
+        margin: 2em 0 0 2.5em;
+    }
+
+    .logo-social {
+        flex: 1 0 30%;
+    }
+}
+
+/* Media queries > 1440px */
+/* ======================= */
+
 @media screen and (min-width: 1440px) {
+    .hero__descr h3 {
+        word-spacing: 0.2em;
+        font-size: 1.3em;
+        line-height: 1.5em;
+    }
+
+    .sign-up__wrapper {
+        width: 60%;
+    }
+
+    .sign-up__input {
+        flex: 2 0 50%;
+    }
+
+    .disclaimer {
+        margin: 2em;
+    }
+
+    .disclaimer > p {
+        text-align: right;
+        padding-right: 1em;
+    }
+
+    .footer__wrapper {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .links__list {
+        display: flex;
+        justify-content: space-around;
+        margin: 2em;
+        padding-left: 20%;
+    }
+
+    .links {
+        flex: 2 0 60%;
+    }
+
     .social-icons {
         display: flex;
         justify-content: space-around;
